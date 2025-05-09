@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+
+body {
+  font-family: 'Comic Relief', system-ui;
+}
+.container {
+  display: block;
+  width: 400px;
+  margin: 10px auto 100px;
+  background-color: #fff;
+  padding: 10px 10px;
+}
+ul {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+h2 {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  width: 400px;
+  background: #fff;
+  border: 2px solid #222;
+  box-shadow: 7px 5px 5px blue;
+  font-size: 30px;
+  padding: 10px 0;
+  margin: 0 0 50px 0;
+}
+header {
+  display: flex;
+  gap: 80px;
+}
+.show {
+  display: flex;
+  margin: 0;
+}
+input[type='checkbox'] {
+  width: 30px;
+  height: 30px;
+}
+.edit {
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #222;
+  font-family: inherit;
+}
+.del {
+  display: flex;
+  padding: 0;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+.show > ul {
+  padding: 5px;
+}
+.show ul li {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  width: 100%;
+  align-items: center;
+  margin: 10;
+  padding: 7px;
+}
+
+.end {
+  display: flex;
+}
+.end ul li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  text-decoration: line-through;
+  gap: 10px;
+  font-size: 18px;
+  color: #8481d0;
+  align-items: center;
+  justify-content: centers;
+}
+
+.add {
+  width: 280px;
+  height: 35px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+header button {
+  background: none;
+  margin: right;
+  padding: 0;
+  border: none;
+  font-size: 35px;
+  transform: all 0.3s;
+}
+button.del:hover {
+  color: red;
+}
+button:hover {
+  color: rgb(0, 81, 255);
+}
+
+p {
+  width: 100%;
+  height: 2px;
+  background: #241dff;
+}
+
+.complete > li {
+  gap: 20px;
+}
