@@ -48,9 +48,10 @@ button.addEventListener('click', function () {
 });
 
 // delete
-const del = document.querySelectorall('del');
+const del = document.querySelectorAll('del');
+const complete
 
 del.addEventListener('click', function () {
-  const li2 = document.querySelector('.complete > li');
-  li.remove();
+  const li = document.querySelector(".complete > li")
+  complet.removeChild(li) 
 });

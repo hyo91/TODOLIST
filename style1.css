@@ -82,6 +82,7 @@ input[type='checkbox'] {
   color: #8481d0;
   align-items: center;
   justify-content: centers;
+  padding-left: 10px;
 }
 
 .add {
