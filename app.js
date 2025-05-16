@@ -19,39 +19,58 @@
 
 // console.log(a);
 
-//  체크박스 선택 > comp으로 이동
-// del 선택 > l해당 li 삭제
+//  ---------------------------------------------------------------------
 
-// 1. 체크박스 선택시 이동
-
-// const todo = document.querySelector('.show');
-// const com = document.querySelector('.complete');
-// const box = document.querySelectorall('input[type="checkbox"]');
-
-// box.addEventListener('click', function () {
-//   com.appendChild(li);
+// // delete
+// const del = document.querySelectorAll('del');
+// const complete = del.addEventListener('click', function () {
+//   const li = document.querySelector('.complete > li');
+//   complet.removeChild(li);
 // });
 
-// 2. +선택시 이동
-const button = document.querySelector('.bt');
-const pluse = document.querySelector('.show2');
+const plus = document.querySelector('.bt');
 const input = document.querySelector('.add');
+const uladd = document.querySelector('.show2');
+const lihtml = document.querySelector('.show2 li');
+const comadd = document.querySelector('complete');
 
-button.addEventListener('click', function () {
-  const value = input.value.trim();
+// ---------------------------------------list 추가----------
+plus.addEventListener('click', function addPlus() {
+  const input2 = input.value.trim();
+  const liadd = document.createElement('li');
+  const checkadd = document.createElement('input');
+  checkadd.type = 'checkbox';
+  const spanadd = document.createElement('span');
+  const editadd = document.createElement('button');
+  editadd.classList.add('edit');
+  editadd.innerText = 'edit';
+  const deladd = document.createElement('button');
+  deladd.classList.add('del'); //HTML에서 사용할 클래스 이름
+  deladd.textContent = 'delete';
 
-  if (value !== '') {
-    const li = document.createElement('li');
-    li.textContent = value;
-    pluse.appendChild(li);
-  }
+  spanadd.textContent = input2;
+  liadd.appendChild(checkadd);
+  liadd.appendChild(spanadd);
+  liadd.appendChild(editadd);
+  liadd.appendChild(deladd);
+  uladd.appendChild(liadd);
+  //--------delate
+  deladd.addEventListener('click', function () {
+    liadd.remove();
+  });
+
+  editadd.addEventListener('click', function () {});
+  checkadd.addEventListener('click', function () {
+    comadd.appendChild(liadd);
+  });
 });
+addPlus();
 
-// delete
-const del = document.querySelectorAll('del');
-const complete
+//---------------------------
 
-del.addEventListener('click', function () {
-  const li = document.querySelector(".complete > li")
-  complet.removeChild(li) 
-});
+// 요소안에 다른 요소 넣기
+// 1. textContent > 가장 기본. 텍스트만넣음
+// 2.innerText > ? 위에거랑 뭔차이임
+// 3.innerHTML > 외에는 전부 텍스트 전용
+// 4.insertAdjacentText(position, text)
+// 5.append() / appendChild()
